@@ -15,6 +15,7 @@
 		4E8AD9AD27208FC100EC10B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E8AD9AC27208FC100EC10B1 /* Assets.xcassets */; };
 		4E8AD9B027208FC100EC10B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E8AD9AE27208FC100EC10B1 /* LaunchScreen.storyboard */; };
 		4E8AD9B82720937600EC10B1 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8AD9B72720937600EC10B1 /* DetailsVC.swift */; };
+		4E8AD9BC27209FE400EC10B1 /* select.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4E8AD9BB27209FE400EC10B1 /* select.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4E8AD9AF27208FC100EC10B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E8AD9B127208FC100EC10B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8AD9B72720937600EC10B1 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		4E8AD9BB27209FE400EC10B1 /* select.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = select.jpeg; path = ../../../../select.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4E8AD99F27208FBF00EC10B1 /* ArtBook_CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4E8AD9BB27209FE400EC10B1 /* select.jpeg */,
 				4E8AD9A027208FBF00EC10B1 /* AppDelegate.swift */,
 				4E8AD9A227208FBF00EC10B1 /* SceneDelegate.swift */,
 				4E8AD9A427208FBF00EC10B1 /* ViewController.swift */,
@@ -133,6 +136,7 @@
 				4E8AD9B027208FC100EC10B1 /* LaunchScreen.storyboard in Resources */,
 				4E8AD9AD27208FC100EC10B1 /* Assets.xcassets in Resources */,
 				4E8AD9A827208FBF00EC10B1 /* Main.storyboard in Resources */,
+				4E8AD9BC27209FE400EC10B1 /* select.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
