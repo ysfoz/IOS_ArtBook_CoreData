@@ -9,13 +9,60 @@ import UIKit
 import CoreData
 
 class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
     
+    var selectedItem = ""
+    var selectedId : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if selectedItem != "" {
+            // Core Data
+            
+            let appDelagate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelagate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            let idString = selectedId?.uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@",idString!)
+            fetchRequest.returnsObjectsAsFaults = false
+            do {
+                let results = try context.fetch(fetchRequest)
+                print(results)
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if let name = result.value(forKey: "name") as? String {
+                            nameText.text = name
+                        }
+                        if let artist = result.value(forKey: "artist") as? String {
+                            artistText.text = artist
+                        }
+                        if let year = result.value(forKey: "year") as? Int {
+                            yearText.text = String(year)
+                        }
+                        if let imageData = result.value(forKey: "image") as? Data {
+                            let image = UIImage(data: imageData)
+                            imageView.image = image
+                        }
+                    }
+                    
+                }
+            } catch {
+                print("error")
+            }
+            
+            
+        } else {
+            nameText.text = ""
+            artistText.text = ""
+            yearText.text = ""
+            
+        }
 
         //RECOGNIZERS
         
