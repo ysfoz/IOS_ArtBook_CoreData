@@ -38,6 +38,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = .photoLibrary
+//
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
     }
@@ -76,6 +77,13 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
             print("error")
 
         }
+        
+        // burada bir mesaj yayinliyoruz, bu mesaja uygulamanin her sayfasindan ulasilabilir.
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
+        
+        // islemlerden sonra otomatik olarak viewController a gitmasi icin
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
 

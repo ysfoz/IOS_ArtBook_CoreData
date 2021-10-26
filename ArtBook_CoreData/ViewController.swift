@@ -28,9 +28,21 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         getData()
     }
     
+    //detail sayfasinda yayinladigimiz mesaji burada yakalayip sayfanin render edilmesini saglayacagiz
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newData"), object: nil)
+    }
+    
     // veri cekme
     
-    func getData() {
+    @objc func getData() {
+        
+        // listeleri her dafasinda bosaltip o sekilde kalan islemleri yapaiyoruz. Boylece wiewWillAppearda ve viewDidLoad icerisinde getData nin iki defa cagrilmasindan dolayi olusan verilerin ekrana iki defa basilmasi sorunu ortadan kalkiyor
+        
+        nameArray.removeAll()
+        idArray.removeAll()
+        
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
