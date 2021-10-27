@@ -50,25 +50,27 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="5do-I3-GHY">
                                 <rect key="frame" x="59" y="126" width="304" height="356"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="304" id="GM0-MK-aYG"/>
-                                    <constraint firstAttribute="height" constant="356" id="h7N-CN-1D0"/>
-                                </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Artist" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z0L-4x-4lC">
                                 <rect key="frame" x="87" y="583" width="254" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="yGI-39-KJl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Year" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-WZ-xFC">
                                 <rect key="frame" x="87" y="645" width="254" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="wtz-T7-lcD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w4-8a-who">
                                 <rect key="frame" x="149" y="706" width="116" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="YLa-cA-Tm6"/>
+                                    <constraint firstAttribute="height" constant="71" id="SLw-lt-zyc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Save"/>
@@ -78,6 +80,9 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63o-ky-maO">
                                 <rect key="frame" x="87" y="519" width="254" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="e3X-od-RpB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -85,22 +90,22 @@
                         <viewLayoutGuide key="safeArea" id="WNK-6S-4ns"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3w4-8a-who" firstAttribute="leading" secondItem="WNK-6S-4ns" secondAttribute="leading" constant="149" id="2gF-U5-avS"/>
-                            <constraint firstItem="5do-I3-GHY" firstAttribute="centerX" secondItem="eS2-Js-gfa" secondAttribute="centerX" constant="4" id="5EQ-m4-H8G"/>
-                            <constraint firstItem="5do-I3-GHY" firstAttribute="top" secondItem="WNK-6S-4ns" secondAttribute="top" constant="38" id="7OL-YV-Zu6"/>
-                            <constraint firstItem="3w4-8a-who" firstAttribute="top" secondItem="IaD-WZ-xFC" secondAttribute="bottom" constant="27" id="88w-Sl-xTD"/>
-                            <constraint firstItem="IaD-WZ-xFC" firstAttribute="top" secondItem="Z0L-4x-4lC" secondAttribute="bottom" constant="28" id="FrV-4E-80a"/>
-                            <constraint firstItem="5do-I3-GHY" firstAttribute="leading" secondItem="63o-ky-maO" secondAttribute="leading" constant="-28" id="Fx3-a0-chj"/>
-                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="leading" secondItem="IaD-WZ-xFC" secondAttribute="leading" id="KJH-Va-ClA"/>
-                            <constraint firstItem="WNK-6S-4ns" firstAttribute="bottom" secondItem="3w4-8a-who" secondAttribute="bottom" constant="85" id="NGI-Qm-Efy"/>
-                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="top" secondItem="63o-ky-maO" secondAttribute="bottom" constant="30" id="Pcf-4w-ieO"/>
-                            <constraint firstItem="63o-ky-maO" firstAttribute="trailing" secondItem="Z0L-4x-4lC" secondAttribute="trailing" id="az1-a0-vDZ"/>
-                            <constraint firstItem="5do-I3-GHY" firstAttribute="leading" secondItem="WNK-6S-4ns" secondAttribute="leading" constant="59" id="ffm-Dc-OFO"/>
-                            <constraint firstItem="63o-ky-maO" firstAttribute="top" secondItem="5do-I3-GHY" secondAttribute="bottom" constant="37" id="hiw-Yf-4MB"/>
-                            <constraint firstItem="WNK-6S-4ns" firstAttribute="trailing" secondItem="63o-ky-maO" secondAttribute="trailing" constant="73" id="mcn-FL-Qkg"/>
-                            <constraint firstItem="63o-ky-maO" firstAttribute="leading" secondItem="Z0L-4x-4lC" secondAttribute="leading" id="nvo-ct-nrQ"/>
-                            <constraint firstItem="5do-I3-GHY" firstAttribute="centerX" secondItem="3w4-8a-who" secondAttribute="centerX" constant="4" id="oxY-bG-IY0"/>
-                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="trailing" secondItem="IaD-WZ-xFC" secondAttribute="trailing" id="qy4-Fk-6fO"/>
+                            <constraint firstItem="5do-I3-GHY" firstAttribute="leading" secondItem="WNK-6S-4ns" secondAttribute="leading" constant="59" id="1mu-LL-iCi"/>
+                            <constraint firstItem="63o-ky-maO" firstAttribute="leading" secondItem="Z0L-4x-4lC" secondAttribute="leading" id="2LN-zQ-lo3"/>
+                            <constraint firstItem="3w4-8a-who" firstAttribute="centerX" secondItem="eS2-Js-gfa" secondAttribute="centerX" id="458-Cr-ivy"/>
+                            <constraint firstItem="WNK-6S-4ns" firstAttribute="trailing" secondItem="63o-ky-maO" secondAttribute="trailing" constant="73" id="CVy-qf-gUd"/>
+                            <constraint firstItem="IaD-WZ-xFC" firstAttribute="top" secondItem="Z0L-4x-4lC" secondAttribute="bottom" constant="28" id="I99-US-zJ3"/>
+                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="leading" secondItem="IaD-WZ-xFC" secondAttribute="leading" id="LUZ-Re-Wdn"/>
+                            <constraint firstItem="WNK-6S-4ns" firstAttribute="bottom" secondItem="3w4-8a-who" secondAttribute="bottom" constant="85" id="NSx-Ls-5JM"/>
+                            <constraint firstItem="3w4-8a-who" firstAttribute="top" secondItem="IaD-WZ-xFC" secondAttribute="bottom" constant="27" id="SOr-Qw-5ea"/>
+                            <constraint firstItem="5do-I3-GHY" firstAttribute="top" secondItem="WNK-6S-4ns" secondAttribute="top" constant="38" id="Ufw-Ug-Trh"/>
+                            <constraint firstItem="63o-ky-maO" firstAttribute="trailing" secondItem="Z0L-4x-4lC" secondAttribute="trailing" id="bjb-XN-PSe"/>
+                            <constraint firstItem="3w4-8a-who" firstAttribute="leading" secondItem="WNK-6S-4ns" secondAttribute="leading" constant="149" id="d7B-YX-4h9"/>
+                            <constraint firstItem="WNK-6S-4ns" firstAttribute="trailing" secondItem="5do-I3-GHY" secondAttribute="trailing" constant="51" id="eD6-TT-TZa"/>
+                            <constraint firstItem="63o-ky-maO" firstAttribute="leading" secondItem="WNK-6S-4ns" secondAttribute="leading" constant="87" id="g5v-vq-wwr"/>
+                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="trailing" secondItem="IaD-WZ-xFC" secondAttribute="trailing" id="p1P-RL-tF2"/>
+                            <constraint firstItem="63o-ky-maO" firstAttribute="top" secondItem="5do-I3-GHY" secondAttribute="bottom" constant="37" id="utT-fm-oPQ"/>
+                            <constraint firstItem="Z0L-4x-4lC" firstAttribute="top" secondItem="63o-ky-maO" secondAttribute="bottom" constant="30" id="yqo-LX-yJ8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Ep-cj-gVe"/>
@@ -108,6 +113,7 @@
                         <outlet property="artistText" destination="Z0L-4x-4lC" id="Cuv-jz-z9N"/>
                         <outlet property="imageView" destination="5do-I3-GHY" id="BRm-2o-6oa"/>
                         <outlet property="nameText" destination="63o-ky-maO" id="fHL-QM-pxB"/>
+                        <outlet property="saveButton" destination="3w4-8a-who" id="Bb0-Ft-eC8"/>
                         <outlet property="yearText" destination="IaD-WZ-xFC" id="Abo-qO-sg2"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var selectedItem = ""
     var selectedId : UUID?
@@ -23,6 +24,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
         
         if selectedItem != "" {
             // Core Data
+            saveButton.isHidden = true
             
             let appDelagate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelagate.persistentContainer.viewContext
@@ -58,6 +60,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
             
             
         } else {
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
             nameText.text = ""
             artistText.text = ""
             yearText.text = ""
@@ -92,6 +96,7 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate,UINavigationC
     //2
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
